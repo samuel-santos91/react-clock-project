@@ -1,27 +1,23 @@
+@use "../../styles/partials/variables" as vars;
+@use "../../styles/partials/general-mixins";
+
 .hour-hand {
-    width: 80px;
-    height: 4px;
-    background-color: aqua;
+  @include general-mixins.clockHandConfig(
+    vars.$hour-hand-length,
+    vars.$hour-hand-thickness
+  );
+}
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-  .minute-hand {
-    width: 100px;
-    height: 3px;
-    background-color: red;
+.minute-hand {
+  @include general-mixins.clockHandConfig(
+    vars.$minute-hand-length,
+    vars.$minute-hand-thickness
+  );
+}
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-  .second-hand {
-    width: 130px;
-    height: 1px;
-    background-color: green;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
+.second-hand {
+  @include general-mixins.clockHandConfig(
+    vars.$second-hand-length,
+    vars.$second-hand-thickness
+  );
+}
