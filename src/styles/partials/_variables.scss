@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "DigitalClock";
+  src: url("../../assets/fonts/digital-7.mono.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//COLOURS
+$display-digit: rgb(233, 233, 233);
+$clock-hands: white;
+$noir-theme: rgb(20, 20, 20);
+$grey-theme: rgb(203, 203, 203);
+$shadow-theme: rgb(117 109 109);
+
+//FONTS
+$digital-clock: "DigitalClock", sans-serif;
