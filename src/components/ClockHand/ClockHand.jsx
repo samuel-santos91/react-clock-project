@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
-import classes from './ClockHand.module.scss'
+import { getClockHandRotation } from "../../utils/timeFunctions";
 
-const ClockHand = ({type}) => {
-  return (
-    <span className={classes[`${type}-hand`]}></span>
-  )
-}
+import classes from "./ClockHand.module.scss";
 
-export default ClockHand
+const ClockHand = ({
+  type,
+  rotationAngle,
+  translateX = 0,
+  translateOriginX = 0,
+}) => {
+  useEffect(() => {
+    getClockHandRotation(type, rotationAngle, translateX, translateOriginX);
+  }, [rotationAngle]);
+
+  return <span id={type} className={classes[`${type}-hand`]}></span>;
+};
+
+export default ClockHand;

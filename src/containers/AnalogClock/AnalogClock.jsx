@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import ClockHand from "../../components/ClockHand/ClockHand";
+import { TimeContext } from "../../context/TimeContextProvider";
 
 import classes from "./AnalogClock.module.scss";
-import ClockHand from "../../components/ClockHand/ClockHand";
 
 const AnalogClock = () => {
+  const { rotationAngle } = useContext(TimeContext);
+
   return (
     <section>
       <div className={classes.analog}>
-        <ClockHand type={"hour"}/>
-        <ClockHand type={"minute"}/>
-        <ClockHand type={"second"}/>
+        <ClockHand
+          type={"hour"}
+          rotationAngle={rotationAngle.hourAngle}
+          translateX="-20%"
+          translateOriginX="20%"
+        />
+        <ClockHand
+          type={"minute"}
+          rotationAngle={rotationAngle.minuteAngle}
+          translateX="-15%"
+          translateOriginX="15%"
+        />
+        <ClockHand type={"second"} rotationAngle={rotationAngle.secondAngle} />
       </div>
     </section>
   );
