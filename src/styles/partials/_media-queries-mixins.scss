@@ -1,0 +1,7 @@
+@use "./variables" as vars;
+
+@mixin small-break {
+  @media (max-width: vars.$breakpoint-sm-width) {
+    @content;
+  }
+}

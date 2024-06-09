@@ -1,9 +1,14 @@
 @use "../../styles/partials/variables" as vars;
+@use "../../styles/partials/media-queries-mixins";
 
 .analog {
   width: vars.$clock-diameter;
   height: vars.$clock-diameter;
-  
+  @include media-queries-mixins.small-break {
+    width: vars.$clock-diameter-sm-screen;
+    height: vars.$clock-diameter-sm-screen;
+  }
+
   background: linear-gradient(
     to top,
     vars.$grey-theme,

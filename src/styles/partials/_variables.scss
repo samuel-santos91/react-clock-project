@@ -37,3 +37,7 @@ $hour-hand-thickness: $hour-hand-length * 0.0967;
 $second-hand-thickness-sm-screen: $second-hand-length-sm-screen * 0.0111;
 $minute-hand-thickness-sm-screen: $minute-hand-length-sm-screen * 0.0375;
 $hour-hand-thickness-sm-screen: $hour-hand-length-sm-screen * 0.0967;
+
+//BREAK POINTS
+$breakpoint-sm-width: 768px;
+$breakpoint-lg-width: 1440px;

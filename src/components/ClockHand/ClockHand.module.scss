@@ -1,11 +1,19 @@
 @use "../../styles/partials/variables" as vars;
 @use "../../styles/partials/general-mixins";
+@use "../../styles/partials/media-queries-mixins";
 
 .hour-hand {
   @include general-mixins.clockHandConfig(
     vars.$hour-hand-length,
     vars.$hour-hand-thickness
   );
+
+  @include media-queries-mixins.small-break {
+    @include general-mixins.clockHandConfig(
+      vars.$hour-hand-length-sm-screen,
+      vars.$hour-hand-thickness-sm-screen
+    );
+  }
 }
 
 .minute-hand {
@@ -13,6 +21,13 @@
     vars.$minute-hand-length,
     vars.$minute-hand-thickness
   );
+
+  @include media-queries-mixins.small-break {
+    @include general-mixins.clockHandConfig(
+      vars.$minute-hand-length-sm-screen,
+      vars.$minute-hand-thickness-sm-screen
+    );
+  }
 }
 
 .second-hand {
@@ -20,4 +35,11 @@
     vars.$second-hand-length,
     vars.$second-hand-thickness
   );
+
+  @include media-queries-mixins.small-break {
+    @include general-mixins.clockHandConfig(
+      vars.$second-hand-length-sm-screen,
+      vars.$second-hand-thickness-sm-screen
+    );
+  }
 }

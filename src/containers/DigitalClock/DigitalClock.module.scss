@@ -1,4 +1,5 @@
 @use "../../styles/partials/variables" as vars;
+@use "../../styles/partials/media-queries-mixins";
 
 .digital {
   display: flex;
@@ -14,8 +15,19 @@
   font-size: vars.$clock-diameter * 0.267;
   color: vars.$display-digit;
 
+  @include media-queries-mixins.small-break {
+    margin-top: vars.$between-clocks-sm-screen;
+    height: vars.$clock-diameter-sm-screen * 0.283;
+    font-size: vars.$clock-diameter-sm-screen * 0.267;
+    padding: 0 vars.$clock-diameter-sm-screen * 0.067;
+  }
+
   &_numbers,
   &_colons {
     margin-top: vars.$clock-diameter * 0.03;
+
+    @include media-queries-mixins.small-break {
+        margin-top: vars.$clock-diameter-sm-screen * 0.03;
+      }
   }
 }
