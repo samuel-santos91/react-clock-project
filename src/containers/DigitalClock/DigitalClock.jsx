@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext } from "react";
+
+import { TimeContext } from "../../context/TimeContextProvider";
 
 const DigitalClock = () => {
-  return (
-    <div>DigitalClock</div>
-  )
-}
+  const { formattedTime } = useContext(TimeContext);
 
-export default DigitalClock
+  return (
+    <time>
+      <span>{formattedTime?.hours}</span>
+      <span>:</span>
+      <span>{formattedTime?.minutes}</span>
+      <span>:</span>
+      <span>{formattedTime?.seconds}</span>
+    </time>
+  );
+};
+
+export default DigitalClock;

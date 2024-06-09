@@ -5,14 +5,16 @@ import { getFormattedTime } from "../utils/timeFunctions";
 export const TimeContext = createContext(null);
 
 const TimeContextProvider = ({ children }) => {
-  const [formattedTime, setFormattedTime] = useState();
+  const [date, setDate] = useState(new Date());
+  const [formattedTime, setFormattedTime] = useState(getFormattedTime(date));
 
   useEffect(() => {
-    const currentTime = new Date();
+    const interval = setInterval(() => {
+      const currentDate = new Date();
+      setDate(currentDate);
 
-    setFormattedTime(getFormattedTime(currentTime));
-
-    const interval = setInterval(() => {}, 1000);
+      setFormattedTime(getFormattedTime(date));
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
