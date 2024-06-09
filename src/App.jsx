@@ -1,6 +1,6 @@
 import React from "react";
 
-import Home from "./containers/Home/Home";
+import Home from "./pages/Home/Home";
 import TimeContextProvider from "./context/TimeContextProvider";
 
 function App() {

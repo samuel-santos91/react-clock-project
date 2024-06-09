@@ -1,7 +1,7 @@
 import React from "react";
 
-import AnalogClock from "../AnalogClock/AnalogClock";
-import DigitalClock from "../DigitalClock/DigitalClock";
+import AnalogClock from "../../containers/AnalogClock/AnalogClock";
+import DigitalClock from "../../containers/DigitalClock/DigitalClock";
 
 import classes from './Home.module.scss';
 
