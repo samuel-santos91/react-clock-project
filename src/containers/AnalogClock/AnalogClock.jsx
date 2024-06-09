@@ -1,14 +1,15 @@
 import React from "react";
 
 import classes from "./AnalogClock.module.scss";
+import ClockHand from "../../components/ClockHand/ClockHand";
 
 const AnalogClock = () => {
   return (
     <section>
       <div className={classes.analog}>
-        <span className={classes['hour-hand']}></span>
-        <span className={classes['minute-hand']}></span>
-        <span className={classes['second-hand']}></span>
+        <ClockHand type={"hour"}/>
+        <ClockHand type={"minute"}/>
+        <ClockHand type={"second"}/>
       </div>
     </section>
   );
