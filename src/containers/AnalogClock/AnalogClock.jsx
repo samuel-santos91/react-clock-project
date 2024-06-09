@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+
+import classes from "./AnalogClock.module.scss";
 
 const AnalogClock = () => {
   return (
-    <div>AnalogClock</div>
-  )
-}
+    <section>
+      <div className={classes.analog}>
+        <span className={classes['hour-hand']}></span>
+        <span className={classes['minute-hand']}></span>
+        <span className={classes['second-hand']}></span>
+      </div>
+    </section>
+  );
+};
 
-export default AnalogClock
+export default AnalogClock;

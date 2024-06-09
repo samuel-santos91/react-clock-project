@@ -13,7 +13,7 @@ const TimeContextProvider = ({ children }) => {
       const currentDate = new Date();
       setDate(currentDate);
 
-      setFormattedTime(getFormattedTime(date));
+      setFormattedTime(getFormattedTime(currentDate));
     }, 1000);
 
     return () => clearInterval(interval);
