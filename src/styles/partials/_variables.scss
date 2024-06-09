@@ -14,3 +14,26 @@ $shadow-theme: rgb(117 109 109);
 
 //FONTS
 $digital-clock: "DigitalClock", sans-serif;
+
+//ANALOG CLOCK DIMENSIONS
+$clock-diameter: 300px;
+$clock-diameter-sm-screen: 50vw;
+
+//SPACING
+$between-clocks: $clock-diameter * 0.4;
+$between-clocks-sm-screen: $clock-diameter-sm-screen * 0.4;
+
+//CLOCK HANDS SIZES
+$second-hand-length: $clock-diameter * 0.409;
+$minute-hand-length: $clock-diameter * 0.364;
+$hour-hand-length: $clock-diameter * 0.243;
+$second-hand-length-sm-screen: $clock-diameter-sm-screen * 0.409;
+$minute-hand-length-sm-screen: $clock-diameter-sm-screen * 0.364;
+$hour-hand-length-sm-screen: $clock-diameter-sm-screen * 0.243;
+
+$second-hand-thickness: $second-hand-length * 0.0111;
+$minute-hand-thickness: $minute-hand-length * 0.0375;
+$hour-hand-thickness: $hour-hand-length * 0.0967;
+$second-hand-thickness-sm-screen: $second-hand-length-sm-screen * 0.0111;
+$minute-hand-thickness-sm-screen: $minute-hand-length-sm-screen * 0.0375;
+$hour-hand-thickness-sm-screen: $hour-hand-length-sm-screen * 0.0967;

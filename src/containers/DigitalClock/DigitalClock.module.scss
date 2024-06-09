@@ -1,17 +1,21 @@
-@use '../../styles/partials/variables' as vars;
+@use "../../styles/partials/variables" as vars;
 
 .digital {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-top: 50px;
-  height: 50px;
-  padding: 0 20px;
+  margin-top: vars.$between-clocks;
+  height: vars.$clock-diameter * 0.283;
+  padding: 0 vars.$clock-diameter * 0.067;
   background-color: vars.$noir-theme;
 
   font-family: vars.$digital-clock;
-  font-size: 50px;
-  color: vars.$display-digit;;
+  font-size: vars.$clock-diameter * 0.267;
+  color: vars.$display-digit;
 
+  &_numbers,
+  &_colons {
+    margin-top: vars.$clock-diameter * 0.03;
+  }
 }
